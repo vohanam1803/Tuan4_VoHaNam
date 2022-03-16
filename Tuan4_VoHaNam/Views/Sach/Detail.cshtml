@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Thông tin</h2>
+<fieldset>
+    <td class="maLoai"><br />Mã sách: @Model.masach<br /></td>
+    <td class="maLoai">Mã loại: @Model.maloai<br /></td>
+    <td class="hinh">
+        Hình Ảnh:<br /> <space><img src="@Model.hinh" width="200px" height="200px" alt="hinh thumbnail" /></space>
+        <br />
+    </td>
+    <td class="maLoai">Tên sách:@Model.tensach<br /></td>
+    <td class="maLoai">Giá Bán:@Model.giaban<br /></td>
+    <td class="maLoai">Ngày Cập Nhật:@Model.ngaycapnhat<br /></td>
+    <td class="maLoai">Số Lượng Tồn:@Model.soluongton<br /></td>
+
+</fieldset>
+@using (Html.BeginForm())
+{
+<p>
+    @Html.ActionLink("Delete", "Delete", new { id = Model.maloai }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.maloai }) |
+    @Html.ActionLink("Back to List", "ListSach")  
+</p>
+}
