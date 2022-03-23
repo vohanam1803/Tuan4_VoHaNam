@@ -85,11 +85,9 @@
                     var removedStr = myStr.substring(maxLength, $.trim(myStr).length);
                     $(this).empty().html(newStr);
 
-                    $(this).append(' <a href="javascript:void(0);" class="read-
-                    more">đọc tiếp...</a>');
+                    $(this).append(' <a href="javascript:void(0);" class="read- more">đọc tiếp...</a>');
 
-                    $(this).append('<span class="more-text">' + removedStr +
-                    '</span>');
+                    $(this).append('<span class="more-text">' + removedStr +'</span>');
                 }
             });
             $(".read-more").click(function ()

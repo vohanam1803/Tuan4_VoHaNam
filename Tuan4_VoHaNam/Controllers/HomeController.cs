@@ -21,6 +21,7 @@ namespace Tuan4_VoHaNam.Controllers
                 int pageNum = page ?? 1;
                 return View(all_sach.ToPagedList(pageNum, pageSize));
             }
+            
 
         }
 
